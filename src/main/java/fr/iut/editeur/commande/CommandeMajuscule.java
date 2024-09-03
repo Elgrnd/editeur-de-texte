@@ -14,8 +14,9 @@ public class CommandeMajuscule extends CommandeDocument {
             System.err.println("Format attendu : majuscules;debut;fin");
             return;
         }
-        int debut = Integer.parseInt(parameters[0]);
-        int fin = Integer.parseInt(parameters[1]);
+        int debut = Integer.parseInt(parameters[1]);
+        int fin = Integer.parseInt(parameters[2]);
         document.majuscules(debut, fin);
+        super.executer();
     }
 }
