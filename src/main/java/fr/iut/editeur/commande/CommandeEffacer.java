@@ -11,7 +11,7 @@ public class CommandeEffacer extends CommandeDocument {
     @Override
     public void executer() {
         if (parameters.length < 3) {
-            System.err.println("Format attendu : majuscules;debut;fin");
+            System.err.println("Format attendu : effacer;debut;fin");
             return;
         }
         int debut = Integer.parseInt(parameters[1]);

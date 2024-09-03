@@ -37,6 +37,11 @@ public class Document {
         remplacer(debut, fin, "");
     }
 
+    public void clear() {
+        texte = "";
+        ajouter("gg");
+    }
+
     @Override
     public String toString() {
         return this.texte;
