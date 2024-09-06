@@ -36,7 +36,6 @@ public class Document {
 
     public void clear() {
         texte = "";
-        ajouter("gg");
     }
 
     @Override
