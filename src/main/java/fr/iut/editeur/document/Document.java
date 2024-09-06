@@ -38,6 +38,7 @@ public class Document {
         texte = "";
         ajouter("gg");
     }
+    
 
     @Override
     public String toString() {
