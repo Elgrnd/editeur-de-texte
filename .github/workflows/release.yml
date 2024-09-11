@@ -20,7 +20,7 @@ jobs:
           distribution: 'oracle'
           java-version: '17'
       - name: version.jar
-        uses: mvn versions:set -DnewVersion=${{ github.ref_name }} -DgenerateBackupPoms=false
+        run: mvn versions:set -DnewVersion=${{ github.ref_name }} -DgenerateBackupPoms=false
       - name: create .jar
         run: mvn package
       - name: create release
