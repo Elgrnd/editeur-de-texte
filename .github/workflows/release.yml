@@ -1,0 +1,27 @@
+name: Créer une release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  job1:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '17'
+      - name: create .jar
+        run: mvn package
+      - name: create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./target/EditeurDeTexte-0.0.1.jar
