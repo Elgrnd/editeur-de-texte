@@ -59,6 +59,7 @@ public class Document {
      */
     public void clear() {
         texte = "";
+
     }
     
 
