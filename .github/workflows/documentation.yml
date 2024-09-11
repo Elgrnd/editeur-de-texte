@@ -2,10 +2,11 @@ name: Création de documentation4
 
 on:
   push:
-      branches:
-        - master
+    branches:
+      - master
 
-permissions: write
+permissions:
+  contents: write
 
 jobs:
   job1:
